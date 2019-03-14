@@ -1,0 +1,12 @@
+# Check guides at https://confluence.atlassian.com/x/VYk8Lw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+image: java:8
+  
+pipelines:
+  default:
+    - step:
+        script:
+          - bash ./gradlew clean build
+  
+   
