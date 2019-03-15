@@ -24,10 +24,22 @@ public class PlanetEntity implements Serializable{
 
     @Column(name = "name")	
     private String name;
+
+    @Column(name = "climate")	
+    private String climate;
+    
+    @Column(name = "ground")	
+    private String ground;
+    
+    @Column(name = "movieAppearancesNumber")	
+    private Integer movieAppearancesNumber;
 	
-	public PlanetEntity(Long id, String name) {
+	public PlanetEntity(Long id, String name, String climate, String ground, Integer movieAppearancesNumber) {
 		this.id = id;
 		this.name = name;
+		this.climate = climate;
+		this.ground = ground;
+		this.movieAppearancesNumber = movieAppearancesNumber;
 	}
 
 	public Long getId() {
@@ -46,10 +58,37 @@ public class PlanetEntity implements Serializable{
 		this.name = name;
 	}
 
-	public String toString() {
-		return "PlanetEntity [id=" + id + ", name=" + name + ", toString()=" + super.toString() + "]";
+	public String getClimate() {
+		return climate;
 	}
 
+	public void setClimate(String climate) {
+		this.climate = climate;
+	}
+
+	public String getGround() {
+		return ground;
+	}
+
+	public void setGround(String ground) {
+		this.ground = ground;
+	}
+
+	public Integer getMovieAppearancesNumber() {
+		return movieAppearancesNumber;
+	}
+
+	public void setMovieAppearancesNumber(Integer movieAppearancesNumber) {
+		this.movieAppearancesNumber = movieAppearancesNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "PlanetEntity [id=" + id + ", name=" + name + ", climate=" + climate + ", ground=" + ground
+				+ ", movieAppearancesNumber=" + movieAppearancesNumber + "]";
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -58,7 +97,9 @@ public class PlanetEntity implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		PlanetEntity other = (PlanetEntity) obj;
-		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
+		return Objects.equals(climate, other.climate) && Objects.equals(ground, other.ground)
+				&& Objects.equals(id, other.id) && Objects.equals(movieAppearancesNumber, other.movieAppearancesNumber)
+				&& Objects.equals(name, other.name);
 	}
 	
 }
