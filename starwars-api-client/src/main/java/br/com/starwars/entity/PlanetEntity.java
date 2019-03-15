@@ -1,4 +1,4 @@
-package br.com.starwars.entitys;
+package br.com.starwars.entity;
 
 import java.io.Serializable;
 import java.util.Objects;
