@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.starwars.business.PlanetBusiness;
 import br.com.starwars.entitys.PlanetEntity;
 
+/**
+ * @author: Gustavo Silva Coelho
+ * @date: 15/03/2019 
+ */
+
 @RestController
 @RequestMapping("/planets")
 public class PlanetController {
