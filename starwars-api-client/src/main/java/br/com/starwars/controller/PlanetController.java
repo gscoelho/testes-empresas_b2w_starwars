@@ -14,7 +14,6 @@ import br.com.starwars.entitys.PlanetEntity;
 
 /**
  * @author: Gustavo Silva Coelho
- * @date: 15/03/2019 
  */
 
 @RestController
@@ -29,6 +28,11 @@ public class PlanetController {
     return planetBusiness.findById(id);
   }
   
+  @RequestMapping(value = "/{name}", method = RequestMethod.GET)
+  public List<PlanetEntity> findByName(@PathVariable String name){
+    return planetBusiness.findByName(name);
+  }
+
   @RequestMapping(value = "/all", method = RequestMethod.GET)
   public List<PlanetEntity> findAll(){
     return planetBusiness.findAll();

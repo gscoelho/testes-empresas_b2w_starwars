@@ -34,7 +34,9 @@ public class PlanetEntity implements Serializable{
     @Column(name = "movieAppearancesNumber")	
     private Integer movieAppearancesNumber;
 	
-	public PlanetEntity(Long id, String name, String climate, String ground, Integer movieAppearancesNumber) {
+	public PlanetEntity() {}
+
+    public PlanetEntity(Long id, String name, String climate, String ground, Integer movieAppearancesNumber) {
 		this.id = id;
 		this.name = name;
 		this.climate = climate;
